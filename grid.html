@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/dataTable.css" />
+		<link href="css/select2.css" rel="stylesheet" />
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/dataTable.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bj.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+	</head>
+	<style scoped>
+		/* provides a red astrix to denote required fields - this should be included in common stylesheet */
+		
+		.form-group.required .control-label:after {
+			content: "*";
+			color: red;
+			margin-left: 4px;
+		}
+		
+		.select2.select2-container.select2-container--default {
+			width: 100% !important;
+		}
+		
+		table {
+			text-align: center;
+		}
+	</style>
+
+	<body>
+		<button id="addRow">添加一行</button>
+		<table id="example" class="display" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Position</th>
+					<th>Office</th>
+					<th>Age</th>
+					<th>Start date</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<!--<tfoot>
+				<tr>
+					<th>Name</th>
+					<th>Position</th>
+					<th>Office</th>
+					<th>Age</th>
+					<th>Start date</th>
+					<th>Salary</th>
+				</tr>
+			</tfoot>-->
+			<tbody>
+				<tr>
+					<td>Serge Baldwin1</td>
+					<td>Data Coordinator</td>
+					<td>Singapore</td>
+					<td>64</td>
+					<td>2012/04/09</td>
+					<td>$138,575</td>
+				</tr>
+				<tr>
+					<td>Zenaida Frank2</td>
+					<td>Software Engineer</td>
+					<td>New York</td>
+					<td>63</td>
+					<td>2010/01/04</td>
+					<td>$125,250</td>
+				</tr>
+				<tr>
+					<td>Zorita Serrano3</td>
+					<td>111</td>
+					<td>San Francisco</td>
+					<td>56</td>
+					<td>2012/06/01</td>
+					<td>$115,000</td>
+				</tr>
+				<tr>
+					<td>Jennifer Acosta</td>
+					<td>Junior Javascript Developer</td>
+					<td>Edinburgh</td>
+					<td>43</td>
+					<td>2013/02/01</td>
+					<td>$75,650</td>
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+					<td>$145,600</td>
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>
+						<select name="">
+							<option value="">房管局等放假</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>$145,600</td>
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+					<td>$145,600</td>
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>New York</td>
+					<td>
+						<select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>2011/12/06</td>
+					<td>$145,600</td>
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+					<td>$145,600</td>
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+					<td>$145,600</td>
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+					<td>$145,600</td>
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>
+						<select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+
+				</tr><tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>
+						<select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+
+				</tr><tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>
+						<select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+
+				</tr><tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>
+						<select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+
+				</tr><tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>
+						<select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+
+				</tr><tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>
+						<select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+
+				</tr><tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>
+						<select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td>4464546
+					</td>
+					<td>New York</td>
+					<td><select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select></td>
+					<td>2011/12/06</td>
+
+				</tr>
+				<tr>
+					<td>Cara Stevens</td>
+					<td>Sales Assistant</td>
+					<td><select name="">
+							<option value="">啊啥的发货单号</option>
+							<option value="">我的热情1</option>
+							<option value="">我的热情2</option>
+						</select>
+					</td>
+					<td>New York</td>
+					<td>46</td>
+					<td>2011/12/06</td>
+
+				</tr>
+			</tbody>
+		</table>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#example').DataTable({
+					"scrollY": "500px",
+				    "scrollCollapse": "true",
+				    "ordering": false,	   //禁止排序
+				    "info": false,    	//控制是否显示表格左下角的信息
+				     "paging": false    //禁止分页
+				});
+				$('#example').editableTableWidget();
+				$('select').select2();
+
+				var t = $('#example').DataTable();
+
+				$('#addRow').on('click', function() {
+					t.row.add([
+						"地方郭德纲",
+						"的返回房间",
+						"法规和规范和",
+						"地方很尴尬",
+						"法国恢复"
+					]).draw(true);
+				});
+
+				// Automatically add a first row of data
+				//$('#addRow').click();
+				
+				
+			});
+		</script>
+	</body>
+
+</html>
